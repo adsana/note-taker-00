@@ -57,6 +57,6 @@ app.delete("/api/notes/:id", function(req, res) {
     res.json(savedNotes);
 })
 
-app.listen(port, function() {
-    console.log(`Now listening to port ${port}. Enjoy the app!`);
+app.listen(process.env.PORT || 3000, 
+	() => console.log("Server is running..."));
 })
